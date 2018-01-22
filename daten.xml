@@ -1,7 +1,7 @@
-
+﻿
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE filmsammlung SYSTEM "HOMEWORK.dtd">
+<!DOCTYPE filmsammlung SYSTEM "datenDTD.dtd">
 
 <filmsammlung>
 
@@ -9,7 +9,7 @@
         <film nr="8">
             <regisseur>Jonathan Demme</regisseur>
         
-            <titel genre="thriller">Das Schweigen der L�mmer</titel>
+            <titel genre="thriller">Das Schweigen der L宭er</titel>
                     
             <jahr>1991</jahr>
                 
