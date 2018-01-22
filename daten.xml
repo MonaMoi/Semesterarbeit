@@ -1,0 +1,177 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE filmsammlung SYSTEM "HOMEWORK.dtd">
+
+<filmsammlung>
+
+
+        <film nr="8">
+            <regisseur>Jonathan Demme</regisseur>
+        
+            <titel genre="thriller">Das Schweigen der Lämmer</titel>
+                    
+            <jahr>1991</jahr>
+                
+            <beschreibung>A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.</beschreibung>
+               
+            <preis>20,00 EUR</preis>
+                
+            <laenge>118 min</laenge>
+        
+        </film>
+            
+        
+        <film nr="54">
+            <regisseur>Nancy Meyers</regisseur>
+        
+            <titel genre="romantik">Liebe braucht keine Ferien</titel>
+                    
+            <jahr>2006</jahr>
+                
+            <beschreibung>Two women troubled with guy-problems swap homes in each other's countries, where they each meet a local guy and fall in love.</beschreibung>
+               
+            <preis>18,99 EUR</preis>
+                
+            <laenge>138 min</laenge>
+        
+        </film>
+        
+        
+        <film nr="127">
+            <regisseur>Darren Aronofsky</regisseur>
+        
+            <titel genre="drama">Requiem for a Dream</titel>
+                    
+            <jahr>2000</jahr>
+                
+            <beschreibung>The drug-induced utopias of four Coney Island people are shattered when their addictions run deep.</beschreibung>
+               
+            <preis>31,49 EUR</preis>
+                
+            <laenge>102 min</laenge>
+        
+        </film>
+        
+        
+        <film nr="355">
+            <regisseur>Francis Ford Coppola</regisseur>
+        
+            <titel genre="krimi">Der Pate</titel>
+                    
+            <jahr>1972</jahr>
+                
+            <beschreibung>The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.</beschreibung>
+               
+            <preis>35,99 EUR</preis>
+                
+            <laenge>175 min</laenge>
+        
+        </film>
+        
+        
+        <film nr="687">
+            <regisseur>Hayao Miyazaki</regisseur>
+        
+            <titel genre="animation">Chihiros Reise ins Zauberland</titel>
+                    
+            <jahr>2003</jahr>
+                
+            <beschreibung>During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.</beschreibung>
+               
+            <preis>24,99 EUR</preis>
+                
+            <laenge>125 min</laenge>
+        
+        </film>
+        
+        
+        <film nr="417">
+            <regisseur>Christopher Nolan</regisseur>
+        
+            <titel genre="science fiction">Interstellar</titel>
+                    
+            <jahr>2014</jahr>
+                
+            <beschreibung>A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</beschreibung>
+               
+            <preis>35,99 EUR</preis>
+                
+            <laenge>169 min</laenge>
+        
+        </film>
+        
+        
+        <film nr="277">
+            <regisseur>Danny Leiner</regisseur>
+        
+            <titel genre="comedy">Harold und Kumar</titel>
+                    
+            <jahr>2004</jahr>
+                
+            <beschreibung>A Korean-American office worker and his Indian-American stoner friend embark on a quest to satisfy their desire for White Castle burgers.</beschreibung>
+               
+            <preis>19,99 EUR</preis>
+                
+            <laenge>188 min</laenge>
+        
+        </film>
+        
+        
+        <film nr="351">
+            <regisseur>Fernando Meirelles</regisseur>
+            
+            <regisseur>Katia Lund</regisseur>
+    
+            <titel genre="drama">City of God</titel>
+                    
+            <jahr>2003</jahr>
+                
+            <beschreibung>Two boys growing up in a violent neighborhood of Rio de Janeiro take different paths: one becomes a photographer, the other a drug dealer.</beschreibung>
+               
+            <preis>21,99 EUR</preis>
+                
+            <laenge>130 min</laenge>
+        
+        </film>
+        
+        
+        <film nr="93">
+            <regisseur>Robert Zemeckis</regisseur>
+        
+            <titel genre="drama">Forrest Gump</titel>
+                    
+            <jahr>1994</jahr>
+                
+            <beschreibung>The presidencies of Kennedy and Johnson, Vietnam, Watergate, and other history unfold through the perspective of an Alabama man with an IQ of 75.</beschreibung>
+               
+            <preis>25,99 EUR</preis>
+                
+            <laenge>142 min</laenge>
+        
+        </film>
+        
+        
+        <film nr="109">
+            <regisseur>James Wan</regisseur>
+            
+            <regisseur>Leigh Whannell</regisseur>
+        
+            <regisseur>Patrick Wilson</regisseur>
+        
+            <titel genre="horror">Insidious</titel>
+                    
+            <jahr>2011</jahr>
+                
+            <beschreibung>A family looks to prevent evil spirits from trapping their comatose child in a realm called The Further.</beschreibung>
+               
+            <preis>17,99 EUR</preis>
+                
+            <laenge>103 min</laenge>
+        
+        </film>
+        
+        
+</filmsammlung>
+
+

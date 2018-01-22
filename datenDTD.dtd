@@ -1,0 +1,10 @@
+<!ELEMENT filmsammlung (film+)>
+<!ELEMENT film (regisseur+, titel, jahr, beschreibung, preis, laenge)>
+<!ELEMENT regisseur (#PCDATA)>
+<!ELEMENT titel (#PCDATA)>
+<!ELEMENT jahr (#PCDATA)> 
+<!ELEMENT beschreibung (#PCDATA)>
+<!ELEMENT preis (#PCDATA)>
+<!ELEMENT laenge (#PCDATA)>
+<!ATTLIST film nr CDATA #REQUIRED>
+<!ATTLIST titel genre CDATA #REQUIRED>
