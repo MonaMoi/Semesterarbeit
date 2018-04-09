@@ -1,4 +1,3 @@
-
 #include "XMLTag.h"
 
 XMLTag::XMLTag(const std::string &content, const std::string &name, const std::map<std::string, std::string> &attr,

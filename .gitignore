@@ -1,3 +1,8 @@
 .idea/
 cmake-build-debug/
+<<<<<<< HEAD
 *.pro.user/
+=======
+*.pro.user
+*.pro.user.*
+>>>>>>> removed references from test files
