@@ -37,6 +37,8 @@ public:
 
     void setChildren(std::vector<XMLTag *> children);
 
+    std::vector<XMLTag *> getChildren();
+
     void setLevel(int level);
 
     const std::string &getName() const;

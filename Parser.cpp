@@ -52,13 +52,17 @@ void Parser::parseXMLData(std::ifstream &data) {
                     buffer = "";
                 } else {
                     data.putback(nextChar);
-                    //wenn content leer ist, ist der nächste Tag 1 Level tiefer
-                    if (current->getContent().empty()) level++;
                     state = isStartTag;
                     parent = current; // current wird parent vom nächsten Tag
+                    if (xmlRoot == nullptr){
+                        xmlRoot = current;
+                    }
                     current = new XMLTag(level); // nächstes Tag
                     current->setParent(parent); // setze dem neuem Tag sein parent (altes Tag)
-                    if (level>0) parent->addChild(current);
+                    if (current->getContent().empty()){
+                        level++;
+                        parent->addChild(current);
+                   }
                 }
 
                 break;
@@ -102,6 +106,18 @@ void Parser::parseXMLData(std::ifstream &data) {
 void Parser::debug_output() {
     for (DataObject *dataObject : dataObjects) {
         std::cout << dataObject << std::endl;
+    }
+}
+
+void Parser::printXMLTree(XMLTag*current){
+    if (current->getChildren().size()!=0){
+        for (XMLTag * child:current->getChildren()){
+            for (unsigned int i = 0; i<level; i++){
+                std::cout << " ";     //Einrückungen mal level
+            }
+            std::cout << current->getName() << std::endl;
+            printXMLTree(child);
+        }
     }
 }
 

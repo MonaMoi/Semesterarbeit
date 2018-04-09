@@ -55,5 +55,13 @@ back:
 
     parser->debug_output();
 
+    input.open(""); // TODO: get file data !!!
+
+    while (!input.eof()){
+        parser->parseXMLData(input);
+    }
+
+    parser->printXMLTree(parser->getRoot()); //TODO: implement getRoot !!!!
+
     return EXIT_SUCCESS;
 }

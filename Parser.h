@@ -39,6 +39,8 @@ public:
     // for debugging
     void debug_output();
 
+    void printXMLTree(XMLTag*current);
+
 };
 
 

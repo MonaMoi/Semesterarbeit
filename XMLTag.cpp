@@ -55,6 +55,10 @@ void XMLTag::setChildren(std::vector<XMLTag *> children) {
     this->children = std::move(children);
 }
 
+std::vector<XMLTag *> XMLTag::getChildren(){
+    return children;
+}
+
 void XMLTag::setLevel(int level) {
     this->level = level;
 }
