@@ -2,7 +2,7 @@
 #ifndef TEST_DATAOBJECT_H
 #define TEST_DATAOBJECT_H
 
-#include <c++/iostream>
+#include <iostream>
 #include <ostream>
 
 class DataObject {
