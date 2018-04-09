@@ -1,9 +1,6 @@
-//
-// Created by shominees on 6.2.18.
-//
 
-#include <c++/iostream>
-#include <c++/vector>
+#include <iostream>
+#include <vector>
 #include <ostream>
 #include <map>
 
@@ -13,47 +10,51 @@
 
 class XMLTag {
 private:
-    std::string content="";
+    std::string content = "";
     std::string name;
-    std::map<std::string,std::string> attributes={};  //Attribute als Map, damit man sie als zwei verschiedene typen abspeichern, Map speicher Keyvalues(Key + passender Value)
-    XMLTag *parent;  //Tag kennt parent und alle seine Kinder
-    std::vector<XMLTag*> children;
+    //Attribute als Map, damit man den Attributnamen (key) und dessen Wert (value) in einer Datenstruktur speichern kann
+    std::map<std::string, std::string> attributes = {};
+    //Tag kennt parent und alle seine Kinder
+    XMLTag *parent;
+    std::vector<XMLTag *> children;
     int level;
+
 public:
-    XMLTag(const std::string &content, const std::string &name, const std::map<std::string,std::string> &attr, XMLTag *parent,
-           const std::vector<XMLTag *> &children, int level);
+    XMLTag(const std::string &content, const std::string &name, const std::map<std::string, std::string> &attr,
+           XMLTag *parent, const std::vector<XMLTag *> &children, int level);
 
-    XMLTag(int level);
+    explicit XMLTag(int level);
 
-    void setcontent();
-    void setname();
-    void setattributes();
-    void setparent();
-    void setchildren();
-    void setlevel();
-
-    // TODO: implement correct destructor
     ~XMLTag();
+
+    // FIX: Die Setter waren nicht korrekt implementiert, deshalb wurden die vom Parser nicht gefunden
+    void setContent(std::string content);
+
+    void setName(std::string name);
+
+    void setAttributes(std::map<std::string, std::string> attributes);
+
+    void setParent(XMLTag *parent);
+
+    void setChildren(std::vector<XMLTag *> children);
+
+    void setLevel(int level);
 
     const std::string &getName() const;
 
-    const std::map<std::string,std::string> &getAttr() const;
+    const std::map<std::string, std::string> &getAttributes() const;
 
-    const std::string &getcontent() const;
+    const std::string &getContent() const;
+
+    XMLTag* getParent() const;
 
     int getLevel() const;
 
-    // TODO: implement add child option
     void addChild(XMLTag *xmlTag);
 
-    // TODO: implement add attribute option, MEthode um Werte/atrribute in die Map einzufügen
     void addAttribute(std::string &attributeName, std::string &attributeValue);
 
-    // TODO: overload output operator
     friend std::ostream &operator<<(std::ostream &os, const XMLTag &tag);
-
-
 };
-
 
 #endif //TEST_XMLTAG_H

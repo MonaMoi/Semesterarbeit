@@ -1,6 +1,3 @@
-//
-// Created by shominees on 6.2.18.
-//
 
 #ifndef TEST_DTDTAG_H
 #define TEST_DTDTAG_H

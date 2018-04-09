@@ -15,11 +15,12 @@ int main() {
     input.open(filename);
 
     while (!input.eof()) {
-        parser->parseMetaData(input);
+        parser->parseXMLData(input);
+       // parser->parseMetaData(input);
     }
     input.close();
 
-    parser->default_output();
+    parser->debug_output();
 
     return EXIT_SUCCESS;
 }

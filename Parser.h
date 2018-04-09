@@ -1,5 +1,5 @@
-#include <c++/vector>
-#include <c++/fstream>
+#include <vector>
+#include <fstream>
 #include "DataObject.h"
 #include "XMLTag.h"
 #include "DTDTag.h"
@@ -12,27 +12,32 @@ class Parser {
 private:
 
     std::vector<DataObject*> dataObjects;
-    XMLTag* xmlRoot;
-    DTDTag* dtdRoot;
+    XMLTag* xmlRoot = nullptr;
+    DTDTag* dtdRoot = nullptr;
 
 public:
 
-    static std::vector<std::string> split_by_delimiter(std::string &reference, char delimiter); //Methode kann augerufen weerden ohne instanz aufzurufen (static)
+    Parser() = default;
+
+    ~Parser();
+
+    static std::vector<std::string> split_by_delimiter(std::string &reference, char delimiter);
 
     void parseMetaData(std::ifstream &data);
 
-    // TODO: try to find a possible solution
-    void parseDTDData(std::ifstream & data);
-
     void parseXMLData(std::ifstream & data);
 
-    void createNewXML(std::ostream &xml); //einzelnde tag attribute durchiterriert und mit output writer definieren, wie overload nur klammern dazusetzen und children korrekt reinschreiben, dsnn mit overload in eine datei schreiben
+    // TODO: nur für Stufe 4
+    void parseDTDData(std::ifstream & data);
 
-    void default_output();
+    // TODO: den XML-Baum durchiterieren und an der richtigen Stelle (im Child Vector) ein neues Tag mit den neuen Metainfos einfügen (Parent setzen nicht vergessen!)
+    void mergeData();
 
-    Parser() = default;
+    // TODO: den XML-Baum durchiterieren alle Taginfos auslesen und wieder mit '<' und '>' in den output writer schreiben (<<operator overloaden?)
+    void createNewXML(std::ostream &xml);
 
-    ~Parser();;
+    // for debugging
+    void debug_output();
 
 };
 

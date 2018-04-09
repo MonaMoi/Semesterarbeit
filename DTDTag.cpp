@@ -1,7 +1,3 @@
-//
-// Created by shominees on 6.2.18.
-//
-
 #include "DTDTag.h"
 
 DTDTag::DTDTag(const std::string &name, const std::vector<std::string> &attr, int level,
