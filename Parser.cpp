@@ -54,11 +54,17 @@ void Parser::parseXMLData(std::ifstream &data) {
                     data.putback(nextChar);
                     state = isStartTag;
                     parent = current; // current wird parent vom nächsten Tag
+                    if (xmlRoot == nullptr){
+                        xmlRoot = current;
+                    }
                     current = new XMLTag(level); // nächstes Tag
                     current->setParent(parent); // setze dem neuem Tag sein parent (altes Tag)
+
                     if (current->getContent().empty()){ //wenn content leer ist, ist der nächste Tag 1 Level tiefer
                         level++;
                         parent->addChild(current);
+
+
                 }
 
                 break;
@@ -104,6 +110,23 @@ void Parser::debug_output() {
         std::cout << dataObject << std::endl;
     }
 }
+
+void Parser::printXMLTree(XMLTag*current){
+    if (current->getChildren().size()!=0){
+        for (XMLTag * child:current->getChildren()){
+            for (unsigned int i = 0; i<level; i++){
+                std::cout << " ";     //Einrückungen mal level
+            }
+            std::cout << current->getName() << std::endl;
+            printXMLTree(child);
+        }
+    }
+}
+
+const std::string &Parser::getRoot() const {
+    return xmlRoot;
+}
+
 std::vector<std::string> Parser::split_by_delimiter(std::string &reference, char delimiter) {
     std::vector<std::string> tokenList;
     std::string token;
@@ -122,7 +145,6 @@ Parser::~Parser() {
     delete xmlRoot;
     delete dtdRoot;
 }
-
 
 
 
