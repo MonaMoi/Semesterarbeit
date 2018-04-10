@@ -52,13 +52,13 @@ void Parser::parseXMLData(std::ifstream &data) {
                     buffer = "";
                 } else {
                     data.putback(nextChar);
-                    //wenn content leer ist, ist der nächste Tag 1 Level tiefer
-                    if (current->getContent().empty()) level++;
                     state = isStartTag;
                     parent = current; // current wird parent vom nächsten Tag
                     current = new XMLTag(level); // nächstes Tag
                     current->setParent(parent); // setze dem neuem Tag sein parent (altes Tag)
-                    if (level>0) parent->addChild(current);
+                    if (current->getContent().empty()){ //wenn content leer ist, ist der nächste Tag 1 Level tiefer
+                        level++;
+                        parent->addChild(current);
                 }
 
                 break;
@@ -104,7 +104,6 @@ void Parser::debug_output() {
         std::cout << dataObject << std::endl;
     }
 }
-
 std::vector<std::string> Parser::split_by_delimiter(std::string &reference, char delimiter) {
     std::vector<std::string> tokenList;
     std::string token;
@@ -139,19 +138,6 @@ Parser::~Parser() {
 // * @param data from read text file
 // */
 
-
-//void Parser::parseMetaData(std::ifstream &data) {
-
-//    for (std::string line; getline(data, line);) {
-//        std::vector<std::string> tokens = Parser::split_by_delimiter(line, ' ');
-//        if (!tokens.empty()) {
-//            int id = std::stoi(tokens[0]);
-//            std::string placeholder = tokens[1];
-//            int number = std::stoi(tokens[2]);
-//            auto dataObject = new DataObject(id, placeholder, number);
-//            this->dataObjects.push_back(dataObject);
-//        }
-//    }
 
 //}
 //*/

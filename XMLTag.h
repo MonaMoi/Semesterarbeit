@@ -47,6 +47,8 @@ public:
 
     XMLTag* getParent() const;
 
+
+
     int getLevel() const;
 
     void addChild(XMLTag *xmlTag);
